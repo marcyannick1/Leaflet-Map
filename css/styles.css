@@ -27,7 +27,7 @@ input.input-search, .input-search2 {
     font-weight: bold;
     text-transform: uppercase;
     height: 50px;
-    border: 0px solid #fff;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
 }

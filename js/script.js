@@ -1,5 +1,6 @@
 $(document).ready(function(){
     $("form").submit(function(e){
+        e.preventDefault();
         var settings_input1 = {
             url: "https://api-adresse.data.gouv.fr/search/?q=" + $('.input-search').val() + "&type=housenumber&autocomplete=1",
             type: "GET",
@@ -24,6 +25,12 @@ $(document).ready(function(){
         }
 
         const LeafletMap = (data) => {
+            if($(".leaflet-conatiner")){
+                $(".leaflet-container").remove()  
+
+                $("form").after('<div id="map" class="leaflet-container"></div>');
+            }
+
             const setViewArray = data[0].geometry.coordinates
 
             var map = L.map("map").setView([setViewArray[1], setViewArray[0]], 5);
@@ -60,7 +67,5 @@ $(document).ready(function(){
                 LeafletMap(dataArray)
             });
         });
-
-        e.preventDefault();
     })
 })
