@@ -44,11 +44,8 @@
     <form action="" method="post" id="form">
       <input type="text" class="input-search" placeholder="Point de départ" required>
       <input type="text" class="input-search2" placeholder="Point d'arrivé" required>
-      <button type="submit" class="form-send">Valider</button>
+      <button type="submit" class="form-send">Rechercher</button>
     </form>
-
-    <div id="map" class="leaflet-container">
-    </div>
 
     <!-- SECTION 1 -->
     <!-- <section class="grid margin text-center">

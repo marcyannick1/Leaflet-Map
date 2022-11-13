@@ -30,7 +30,6 @@ function sendData($dataJson, $database){
     }
 }
 
-
 if(isset($_POST["locationData1"])){
     $dataJson = $_POST["locationData1"];
     sendData($dataJson, $db);
