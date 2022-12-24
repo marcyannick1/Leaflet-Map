@@ -8,6 +8,7 @@ $db = new PDO('mysql:host=localhost;dbname=leaflet', 'root', '');
 
 function sendData($dataJson, $database){
     $data = json_decode($dataJson, true);
+    var_dump($data);
 
     foreach ($data as $key => $value) {
         if($data[$key] == "undefined") 

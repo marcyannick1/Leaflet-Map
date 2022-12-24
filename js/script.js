@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
 
         const LeafletMap = (data) => {
-            if($(".leaflet-conatiner")){
+            if($(".leaflet-container")){
                 $(".leaflet-container").remove()  
 
                 $("form").after('<div id="map" class="leaflet-container"></div>');
